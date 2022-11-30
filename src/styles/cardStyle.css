@@ -1,0 +1,14 @@
+.cardField {
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+
+}
