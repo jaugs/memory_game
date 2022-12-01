@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import '../styles/cardStyle.css';
 
 function CreateCards (props) {
@@ -6,28 +6,60 @@ function CreateCards (props) {
 const houses = ['Stark', 'Lannister', 'Arryn', 'Baratheon', 'Targaryen', 'Martell', 'Tyrell', 'Bolton', 'Connington', 'Dayne', 'Greyjoy', 'Hightower', 'Tully', 'Velaryon']
 
 const randomHouse = () => {
-  let num = Math.floor(Math.random() * 13);
+  let num = Math.floor(Math.random() * 14);
     return houses[num];
 }
 
+
+useEffect(() => {
+  props.setclickedArr(houses)
+  displayCard()
+  // eslint-disable-next-line
+}, []);
+
+
+// useEffect(() => {
+//   handleCardClick()
+// }, [props.cardArr]);
+
+function handleCardClick (e) {
+  let target = e.target.innerText
+  let scoreArr = props.clickedArr.filter((item => item !== target))
+  console.log(scoreArr)
+  console.log(props.clickedArr)
+  if (scoreArr.length === props.clickedArr.length) {
+ 
+    displayCard()
+    return
+  } else if (scoreArr.length < props.clickedArr.length) {
+    props.setcurrentGame({
+      currentScore: (parseInt(props.currentGame.currentScore) + 1),
+      highScore: 0
+  })
+    props.setclickedArr(scoreArr)
+    displayCard()}
+  // } else if ()
+  //props.setclickedArr(props.currentScore)
+
+  // props.setcurrentGame({
+  //   currentScore: (14 - props.clickedArr.length),
+  //   highScore: ''
+  // })
+  //displayCard()
+  
+}
+
 function displayCard () {
-    props.setCard({
-      name: randomHouse
-    })
    let newArr = [];
    for (let i=0; i < 10; i++) {
     let house = randomHouse()
-    for (let k=0; k < newArr.length; k++) {
-    if (newArr[k].includes(house)) {
-      console.log(newArr)
+    if (newArr.includes(house)) {
+      displayCard()
       return
-    } 
-    }
-    newArr.push(house);
-   }
-   console.log(newArr)
-   props.setCardArr(newArr)
-   return newArr
+    } else {
+      newArr.push(house)
+    }}
+    props.setCardArr(newArr)
 }
 
 
@@ -83,9 +115,11 @@ function displayCard () {
 return (
   <div className="cardField">
     
-    {
-      props.cardArr.map(item => (
-      <div className="card" key={item}>{item}</div>
+      {props.cardArr.map(item => (
+      <div
+        onClick={handleCardClick}
+        className="card" 
+        key={item}>{item}</div>
     ))}
 
 

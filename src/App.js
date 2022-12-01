@@ -9,7 +9,7 @@ import CreateCards from "./components/card";
 function App() {
 
   const [cardArr, setCardArr] = React.useState([]);
-  const [card, setCard] = React.useState(
+  const [clickedArr, setclickedArr] = React.useState(
     {
       name: ''
     }
@@ -31,8 +31,10 @@ function App() {
       setcurrentGame = {setcurrentGame}
      />
       <CreateCards
-      card = {card}
-      setCard = {setCard}
+      currentGame = {currentGame}
+      setcurrentGame = {setcurrentGame}
+      clickedArr = {clickedArr}
+      setclickedArr = {setclickedArr}
       editing = {editing}
       setEditing = {setEditing}
       cardArr = {cardArr}
