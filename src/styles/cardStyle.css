@@ -1,14 +1,47 @@
 .cardField {
-    border: 1px solid black;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 10px
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: #331C0E;
+    padding:5px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px #67331E;
 }
 
 .card {
-    width: 100px;
-    height: 100px;
-    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 18rem;
+    height: 20rem;
+    background-color: #C38D5F;
+    overflow: hidden;
+    border-radius: 15px;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 10px;
+    color: #FFF190;
+    box-shadow: inset 0 0 12px black;
+}
 
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12rem;
+    padding: 5px;
+    box-shadow: inset 0px 0px 30px 2px black;
+    background-color: #331C0E;
+    border-radius: 15px;
+}
+
+.sigilImage {
+    margin: 5px;
+    max-width: 220px;
+    max-height: 220px;
 }

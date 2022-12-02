@@ -14,24 +14,12 @@ import Greyjoy from '../images/Greyjoy.svg';
 import Hightower from '../images/Hightower.svg';
 import Tully from '../images/Tully.svg';
 import Velaryon from '../images/Velaryon.svg';
-import { type } from "@testing-library/user-event/dist/type";
-
 
 function CreateCards (props) {
 
-//const houses = ['Stark', 'Lannister', 'Arryn', 'Baratheon', 'Targaryen', 'Martell', 'Tyrell', 'Bolton', 'Connington', 'Dayne', 'Greyjoy', 'Hightower', 'Tully', 'Velaryon']
 const currentScore = props.currentGame.currentScore
-const [sigilPics, setsigilPics] = React.useState({
-  Targaryen: Targaryen,
-  Stark: Stark
-})
+
  let housePics = [Targaryen, Stark, Lannister, Arryn, Baratheon, Martell, Tyrell, Bolton, Connington, Dayne, Greyjoy, Hightower, Tully, Velaryon]
-
-
-
-
-
-
 
 const randomHouse = (arr) => {
   let num = Math.floor(Math.random() * 14);
@@ -53,7 +41,14 @@ useEffect(() => {
 
 function handleCardClick (e) {
   let target = e.target
-  console.log(target)
+  if (target.className === "sigilImage") {
+     let alt = target.alt
+     target = alt.split("_").pop()
+  } else if (target.className === "card") {
+    target = target.id
+  } else if (target.className === "name") {
+    target = target.innerText
+  }
   let scoreArr = props.clickedArr.filter((item => item !== target))
   if (scoreArr.length === props.clickedArr.length) {
     props.setcurrentGame({
@@ -98,8 +93,8 @@ return (
       id={item}
       className="card" 
       key={item}>
-      <img src={getPicture(item)} width={'100px'} alt={`HouseSigil ${item}`}></img>
-      <p>{item}</p>
+      <img className="sigilImage" src={getPicture(item)} alt={`HouseSigil_${item}`}></img>
+      <span className="name">{item}</span>
     </div>
     ))}
 

@@ -7,7 +7,8 @@ import CreateCards from "./components/card";
 
 function App() {
   const [houses, setHouses] = React.useState(
-    ['Stark', 'Lannister', 'Arryn', 'Baratheon', 'Targaryen', 'Martell', 'Tyrell', 'Bolton', 'Connington', 'Dayne', 'Greyjoy', 'Hightower', 'Tully', 'Velaryon']);
+    ['Targaryen', 'Stark', 'Lannister', 'Arryn', 'Baratheon', 'Martell', 'Tyrell', 'Bolton', 'Connington', 'Dayne', 'Greyjoy', 'Hightower', 'Tully', 'Velaryon']
+    );
 
   const [cardArr, setCardArr] = React.useState([]);
   const [clickedArr, setclickedArr] = React.useState(

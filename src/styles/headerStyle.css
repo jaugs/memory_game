@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #FFF190;
+    background-image: linear-gradient(#000,#67331E);
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.rules {
+    font-size: 25px;
+    font-weight: 600;
+}
+.scoreboard {
+    font-size: 22px;
+    background-color: #140b05;
+    border-radius: 15px;
+    padding: 9px;
+    box-shadow: inset 0px 0px 30px 2px black;
+}
