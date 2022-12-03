@@ -8,8 +8,8 @@ function CreateHeader (props) {
       <div className="title">A Song of Ice and Fire Memory Game</div>
       <div className="rules">Click on a House Sigil to begin, try to select all the Houses without repeating any!</div>
       <div className="scoreboard">
-        <p>Your current Score: {props.currentGame.currentScore}</p>
-        <p>Your High Score: {props.highScore}</p>
+        <p>Current Score:  {props.currentGame.currentScore}</p>
+        <p>High Score:  {props.highScore}</p>
       </div>
     </div>
     )}

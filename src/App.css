@@ -1,4 +1,14 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  margin: 0; 
   text-align: center;
   background-color: #67331E;
+}
+
+.footer {
+  height: 2.6em;
+  padding: 5px;
+  margin: 0;
+  overflow: hidden;
 }

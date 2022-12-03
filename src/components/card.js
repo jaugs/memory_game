@@ -19,7 +19,7 @@ function CreateCards (props) {
 
 const currentScore = props.currentGame.currentScore
 
- let housePics = [Targaryen, Stark, Lannister, Arryn, Baratheon, Martell, Tyrell, Bolton, Connington, Dayne, Greyjoy, Hightower, Tully, Velaryon]
+let housePics = [Targaryen, Stark, Lannister, Arryn, Baratheon, Martell, Tyrell, Bolton, Connington, Dayne, Greyjoy, Hightower, Tully, Velaryon]
 
 const randomHouse = (arr) => {
   let num = Math.floor(Math.random() * 14);
@@ -65,19 +65,18 @@ function handleCardClick (e) {
     displayCard()}
 }
 
- function displayCard () {
-let sigils = props.houses;
-let newArr = [];
-for (let i=0; i < 10; i++) {
- let house = randomHouse(sigils)
- if (newArr.includes(house)) {
-   displayCard()
-   return
- } else {
-   newArr.push(house)
- }}
- props.setCardArr(newArr)
-
+function displayCard () {
+  let sigils = props.houses;
+  let newArr = [];
+  for (let i=0; i < 10; i++) {
+    let house = randomHouse(sigils)
+     if (newArr.includes(house)) {
+      displayCard()
+      return
+    } else {
+      newArr.push(house)
+  }}
+  props.setCardArr(newArr)
 }
 
 function getPicture(name) {
@@ -97,10 +96,7 @@ return (
       <span className="name">{item}</span>
     </div>
     ))}
-
-
   </div>
 )
 }
-
 export default CreateCards;
