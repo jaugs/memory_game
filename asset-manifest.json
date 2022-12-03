@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/memory_game/static/css/main.fa3ab346.css",
+    "main.js": "/memory_game/static/js/main.22dbc466.js",
+    "static/js/787.69b12325.chunk.js": "/memory_game/static/js/787.69b12325.chunk.js",
+    "static/media/Connington.svg": "/memory_game/static/media/Connington.d9085cd17b38423a8821e52bb3bfa68d.svg",
+    "static/media/Targaryen.svg": "/memory_game/static/media/Targaryen.685673a85bcc2407770d3dcd4c431334.svg",
+    "static/media/Lannister.svg": "/memory_game/static/media/Lannister.6dc368e9a7f88940a34f5ad95b53afe8.svg",
+    "static/media/Velaryon.svg": "/memory_game/static/media/Velaryon.16be30d308512b24942675f51283cd2a.svg",
+    "static/media/Tyrell.svg": "/memory_game/static/media/Tyrell.8070d180e01da339fe1e56ef86c8bf80.svg",
+    "static/media/Tully.svg": "/memory_game/static/media/Tully.80c06b6ceb98d2829fcf959860e76446.svg",
+    "static/media/Martell.svg": "/memory_game/static/media/Martell.01283b783c9c0a4db060396d9b0f436b.svg",
+    "static/media/Greyjoy.svg": "/memory_game/static/media/Greyjoy.922e209a844ffa8e27cb4dae8210d255.svg",
+    "static/media/Bolton.svg": "/memory_game/static/media/Bolton.569c1358662a34948e55eaacc3e9df68.svg",
+    "static/media/Stark.svg": "/memory_game/static/media/Stark.c71341fc0e702dbf6ec1c16311227330.svg",
+    "static/media/Dayne.svg": "/memory_game/static/media/Dayne.58618ee28c7af9331492719d52e64551.svg",
+    "static/media/Hightower.svg": "/memory_game/static/media/Hightower.6815446f09f51b505ed20e0c4ef3129a.svg",
+    "static/media/Baratheon.svg": "/memory_game/static/media/Baratheon.dfc1085803363a9dc1cbb085e3280c99.svg",
+    "static/media/Arryn.svg": "/memory_game/static/media/Arryn.0a502924cdab01cfcb320322a9465514.svg",
+    "index.html": "/memory_game/index.html",
+    "main.fa3ab346.css.map": "/memory_game/static/css/main.fa3ab346.css.map",
+    "main.22dbc466.js.map": "/memory_game/static/js/main.22dbc466.js.map",
+    "787.69b12325.chunk.js.map": "/memory_game/static/js/787.69b12325.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa3ab346.css",
+    "static/js/main.22dbc466.js"
+  ]
+}
